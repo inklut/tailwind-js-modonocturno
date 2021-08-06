@@ -1,0 +1,23 @@
+{
+  "name": "__website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+	"watch": "cd dist && browser-sync start --server --files './*.*' ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss ./src/css/tailwind.css -o ./dist/css/custom.css",
+    "build": "NODE_ENV=production postcss ./src/css/tailwind.css -o ./dist/css/custom.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}
